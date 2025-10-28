@@ -1,9 +1,19 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 import yfinance as yf
 import pandas as pd
 from datetime import datetime
 
 app = FastAPI()
+
+# Add CORS middleware - THIS MAKES IT ACCESSIBLE FROM ANYWHERE
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows ALL domains
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows ALL HTTP methods
+    allow_headers=["*"],  # Allows ALL headers
+)
 
 @app.get("/stock/{ticker}")
 def get_stock_data_by_duration(ticker: str, duration: str = "1d"):
