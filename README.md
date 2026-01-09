@@ -24,13 +24,13 @@ https://yfin.vercel.app
 
 ## 📦 API Endpoints
 
----
-GET /stock/{ticker}?duration=1d
----
-GET /stock/{ticker}/date/{date}
----
-GET /stock/{ticker}/range/{start_date}/{end_date}
----
+
+- GET /stock/{ticker}?duration=1d
+
+- GET /stock/{ticker}/date/{date}
+
+- GET /stock/{ticker}/range/{start_date}/{end_date}
+
 
 ## 🏷 Parameters
 
@@ -44,9 +44,9 @@ YYYY-MM-DD
 
 ## 🧪 Examples
 
-/stock/RELIANCE.NS?duration=1d
-/stock/TCS.NS/date/2024-01-10
-/stock/INFY.NS/range/2024-01-01/2024-01-31
+- /stock/RELIANCE.NS?duration=1d
+- /stock/TCS.NS/date/2024-01-10
+- /stock/INFY.NS/range/2024-01-01/2024-01-31
 
 ## 🛠 Tech Stack
 
