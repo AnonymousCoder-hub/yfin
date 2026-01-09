@@ -1,40 +1,65 @@
-# Indian Stocks API
+# 🇮🇳 yfin — Indian Stocks API
 
-A simple FastAPI application to retrieve basic stock data for Indian stocks using the `yfinance` library, deployable on Vercel.
+yfin is a lightweight FastAPI-based REST API for retrieving Indian stock market data using the yfinance library.
 
-## Deployment on Vercel
+It is designed for frontend apps, learning projects, stock simulators, and dashboards.
 
-## 🚀 Deploy yfin (API)
+## 🚀 Live Deployment
+
+Base URL:
+https://yfin.vercel.app
+
+## 🚀 One-Click Deploy
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AnonymousCoder-hub/yfin)
 
-OR
+## ✨ Features
 
-Follow these steps to deploy this API on Vercel:
+- Indian stock market data
+- FastAPI backend
+- Historical and range-based queries
+- No authentication required
+- Vercel deployable
+- Open-source
 
-1.  **Link your Git Repository:** Connect your Git repository (e.g., GitHub, GitLab, Bitbucket) containing the API code to Vercel.
-2.  **Configure Project:** When setting up the project on Vercel, ensure the following:
-    *   **Root Directory:** If your code is not in the root of the repository, specify the correct root directory.
-    *   **Build Command:** Set the build command to: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-    *   **Output Directory:** This can usually be left blank or set to `.`.
-    *   **Development Command:** This can usually be left blank.
-3.  **Deploy:** Click the "Deploy" button. Vercel will build and deploy your application.
+## 📦 API Endpoints
 
-Once deployed, Vercel will provide you with a unique URL for your API.
+GET /stock/{ticker}?duration=1d
+GET /stock/{ticker}/date/{date}
+GET /stock/{ticker}/range/{start_date}/{end_date}
 
-## API Usage
+## 🏷 Parameters
 
-The API now has three endpoints to get stock data:
+ticker: Stock symbol (example: TCS.NS)
 
-1.  `GET /stock/{ticker}`: Get historical data for a given duration.
-2.  `GET /stock/{ticker}/date/{date}`: Get data for a specific date.
-3.  `GET /stock/{ticker}/range/{start_date}/{end_date}`: Get data for a date range.
+duration (optional):
+1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max
 
--   **`ticker`**: The stock ticker symbol (e.g., `TCS.NS` for Tata Consultancy Services). Indian stock tickers on yfinance usually end with `.NS`.
--   **`duration` (Optional for endpoint 1)**: A query parameter for the first endpoint to specify the duration for historical data. Accepted values include: `1d`, `5d`, `1mo`, `3mo`, `6mo`, `1y`, `2y`, `5y`, `10y`, `ytd`, `max`. The default duration is `1d`.
--   **`date` (For endpoint 2)**: The specific date in `YYYY-MM-DD` format.
--   **`start_date` and `end_date` (For endpoint 3)**: The start and end dates of the range in `YYYY-MM-DD` format.
+date format:
+YYYY-MM-DD
 
-### Examples
+## 🧪 Examples
 
-1.  **Get latest data for Reliance Industries (RELIANCE.NS) using duration:**
+/stock/RELIANCE.NS?duration=1d
+/stock/TCS.NS/date/2024-01-10
+/stock/INFY.NS/range/2024-01-01/2024-01-31
+
+## 🛠 Tech Stack
+
+- Python
+- FastAPI
+- yfinance
+- Uvicorn
+- Vercel
+
+## ⚠️ Disclaimer
+
+For educational use only. Not financial advice.
+
+## 🤝 Contributing
+
+Fork the repo, create a branch, commit, and open a PR.
+
+## ⭐ Support
+
+If this helps you, star the repository.
