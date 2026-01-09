@@ -24,9 +24,13 @@ https://yfin.vercel.app
 
 ## 📦 API Endpoints
 
+---
 GET /stock/{ticker}?duration=1d
+---
 GET /stock/{ticker}/date/{date}
+---
 GET /stock/{ticker}/range/{start_date}/{end_date}
+---
 
 ## 🏷 Parameters
 
