@@ -4,6 +4,12 @@ A simple FastAPI application to retrieve basic stock data for Indian stocks usin
 
 ## Deployment on Vercel
 
+## 🚀 Deploy yfin (API)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AnonymousCoder-hub/yfin)
+
+OR
+
 Follow these steps to deploy this API on Vercel:
 
 1.  **Link your Git Repository:** Connect your Git repository (e.g., GitHub, GitLab, Bitbucket) containing the API code to Vercel.
